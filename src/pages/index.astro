@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.jsx';
+import Hero from '../components/Hero.jsx';
+import Benefits from '../components/Benefits.jsx';
+import InstallCode from '../components/InstallCode.jsx';
+import Features from '../components/Features.jsx';
+import Pricing from '../components/Pricing.jsx';
+import CTA from '../components/CTA.jsx';
+import Footer from '../components/Footer.jsx';
+---
+<BaseLayout>
+  <Header />
+  <main class="main-content">
+    <Hero />
+    <Benefits />
+    <InstallCode />
+    <Features />
+    <Pricing />
+    <CTA />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .main-content {
+      gap: 4rem;
+      padding-top: 2.5rem;
+    }
+  }
+</style>

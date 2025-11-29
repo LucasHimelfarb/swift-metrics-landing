@@ -1,0 +1,72 @@
+.wrapper {
+  padding: 2.5rem;
+  border-radius: 32px;
+  border: 1px solid var(--sm-border);
+  background: linear-gradient(180deg, #ffffff 0%, #f2eeff 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  max-width: 600px;
+}
+
+.kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: var(--sm-muted);
+}
+
+h2 {
+  margin: 0.6rem 0 0.4rem;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+}
+
+.copy {
+  margin: 0;
+  color: var(--sm-muted);
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--sm-card);
+  border-radius: 24px;
+  padding: 1.5rem;
+  border: 1px solid rgba(108, 71, 255, 0.12);
+  box-shadow: 0 15px 30px rgba(15, 15, 15, 0.05);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 0.5rem 0 0;
+  color: var(--sm-muted);
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .grid .card:nth-child(4) {
+    grid-column: span 1;
+  }
+}

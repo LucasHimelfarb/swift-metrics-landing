@@ -1,0 +1,61 @@
+---
+const {
+  title = 'SwiftMetrics | Mobile analytics, but stupidly simple.',
+  description = 'SwiftMetrics es un SDK liviano para React Native y Expo que te permite loguear eventos en segundos y verlos en un dashboard en tiempo real.'
+} = Astro.props;
+---
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <div class="app-shell">
+      <slot />
+    </div>
+  </body>
+</html>
+
+<style>
+  :global(:root) {
+    color-scheme: light;
+    --sm-primary: #6c47ff;
+    --sm-bg: #f7f7f9;
+    --sm-card: #ffffff;
+    --sm-text: #0f0f0f;
+    --sm-muted: #a1a1a6;
+    --sm-border: #e4e4e7;
+    font-family: 'Inter', 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--sm-bg);
+  }
+
+  :global(*), :global(*::before), :global(*::after) {
+    box-sizing: border-box;
+  }
+
+  :global(body) {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--sm-bg);
+    color: var(--sm-text);
+  }
+
+  :global(a) {
+    color: inherit;
+  }
+
+  .app-shell {
+    min-height: 100vh;
+    background: var(--sm-bg);
+    padding: 0 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .app-shell {
+      padding: 0 2.5rem;
+    }
+  }
+</style>
